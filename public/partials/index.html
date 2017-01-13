@@ -1,0 +1,29 @@
+<div ng-controller="ProjectController">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h3>Submitted projects</h3>
+        </div>
+    </md-toolbar>
+    <md-card ng-repeat="project in projects">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{project.name}}</span>
+                <span class="md-subheader">{{project.description}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <md-content layout="column">
+                <md-chips ng-model="project.technos" readonly="true">
+                    <md-chip-template>
+                        <span>
+                            <strong>{{$chip}}</strong>
+                        </span>
+                    </md-chip-template>
+                </md-chips>
+            </md-content>
+        </md-card-content>
+        <md-card-actions>
+            <md-button class="md-raised md-primary" ng-click="status(project._id)">Status</md-button>
+        </md-card-actions>
+    </md-card>
+</div>

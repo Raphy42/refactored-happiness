@@ -1,0 +1,31 @@
+{
+  "name": "42dashboard",
+  "description": "none",
+  "main": "server.js",
+  "authors": [
+    "abarbaro/rdantzer"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/raphy42/fantastic-spork",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material-icons": "^0.7.0",
+    "angular-material": "^1.0.9",
+    "angular-ui-router": "ui-router#^0.3.1",
+    "angular": "^1.5.2",
+    "restangular": "^1.5.2",
+    "angular-cookies": "^1.5.7",
+    "angular-chart.js": "^0.10.2"
+  },
+  "resolutions": {
+    "angular": "1.5.2"
+  }
+}

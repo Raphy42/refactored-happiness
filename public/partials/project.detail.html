@@ -1,0 +1,31 @@
+<div>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span class="md-headline">{{project.name}}</span>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <span class="md-body-1">{{project.description}}</span>
+        <canvas id="radar" class="chart chart-radar"
+                chart-data="data" chart-options="options" chart-labels="labels">
+        </canvas>
+        <md-tabs md-selected="selectIndex" md-border-bottom md-dynamic-height md-autoselect>
+            <md-tab ng-repeat="module in project.modules" label="{{module.name}}">
+                <md-content layout="column">
+                    <p>{{module.description}}</p>
+                    <md-list flex>
+                        <span ng-hide="module.todos.length" class="md-body-2">No todos yet</span>
+                        <md-list-item class="md-3-line" ng-repeat="todo in module.todos">
+                            <div class="md-list-item-text">
+                                <h3>{{todo.task}}</h3>
+                                <h4>{{todo.priority}}</h4>
+                                <p>{{todo.status}}</p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+</div>
+</md-content>
+</div>

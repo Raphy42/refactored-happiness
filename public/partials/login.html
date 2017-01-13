@@ -1,0 +1,21 @@
+<md-content ng-controller="AuthController">
+    <form name="loginForm" data-ng-submit="login(credentials)">
+        <md-input-container class="md-block">
+            <label>Mail</label>
+            <input ng-model="credentials.email" name="email" type="email" required>
+            <div ng-messages="loginForm.email.$error" role="alert">
+                <div ng-message="required">You must supply an email</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input ng-model="credentials.password" name="password" type="password" required>
+            <div ng-messages="loginForm.password.$error" role="alert">
+                <div ng-message="required">You must supply a password</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <md-button ng-disabled="loginForm.$invalid" type="submit" class="md-raised md-primary">Login</md-button>
+        </md-input-container>
+    </form>
+</md-content>

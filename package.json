@@ -1,0 +1,26 @@
+{
+  "name": "42dashboard",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nohup nodemon server.js >> fantastic-spork.log &",
+    "stop": "kill `cat pidfile`"
+  },
+  "author": "abarbaro/rdantzer",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.1",
+    "express": "^4.14.0",
+    "express-validator": "^2.20.7",
+    "github": "^1.3.0",
+    "jwt-simple": "^0.5.0",
+    "morgan": "^1.7.0",
+    "npid": "^0.4.0",
+    "passport-github2": "^0.1.10",
+    "passport-jwt": "^2.0.0"
+  }
+}

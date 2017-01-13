@@ -1,0 +1,17 @@
+body {
+    overflow: hidden;
+    background-color: #EEEEEE;
+}
+
+.md-whiteframe {
+    background: #fff;
+}
+
+#content {
+    padding: 24px;
+}
+
+.icon {
+    width: 5em;
+    height: 5em;
+}
